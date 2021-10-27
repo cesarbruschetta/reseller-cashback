@@ -21,7 +21,7 @@ flake8: ## Runs some checks on code
 
 mypy: ## Checks python typing
 	@poetry run mypy \
-	    --strict reseller_cashback  && \
+	    reseller_cashback  && \
 	echo 'Mypy check success!\n'
 
 checks-nosave: blank-line isort black flake8 mypy ## Runs isort and black on check mode (don't automatic format the code), flake8 and mypy
