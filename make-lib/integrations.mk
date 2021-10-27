@@ -1,9 +1,9 @@
 
-integration-pipeline-local: poetry-check checks-nosave all-tests coverage ## Runs all steps for integrating locally or Bitbucket CI
+integration-pipeline-local: poetry-check checks-nosave tests ## Runs all steps for integrating locally or Bitbucket CI
 
 integration-pipeline-docker: poetry-check checks-nosave docker-up ## Runs all steps for integrating in docker
 	@sleep 20
-	@make all-tests
+	@make tests
 	@make docker-down
 	@poetry run docker-compose run coverage
 

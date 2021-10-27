@@ -1,6 +1,3 @@
-all-tests: ## Runs all tests
-	@poetry run coverage run -p -m pytest -xvv reseller_cashback --disable-warnings --import-mode=importlib
-
 tests: ## Runs unit tests
 	@make tests-matching-cov && \
 	make coverage
