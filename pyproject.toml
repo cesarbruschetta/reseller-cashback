@@ -1,0 +1,52 @@
+[tool.isort]
+case_sensitive= '1'
+use_parentheses = '1'
+line_length = '79'
+order_by_type = '1'
+multi_line_output = '3'
+include_trailing_comma = '1'
+lines_after_imports = '2'
+atomic = '1'    
+
+[tool.black]
+exclude = '''
+    \.pyi
+'''
+target-version = ['py39']
+line-length = '79'
+skip-string-normalization = '1'
+
+[tool.poetry]
+name = "reseller-cashback"
+version = "0.1.0"
+description = ""
+authors = ["Cesar Augusto <cesarabruschetta@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.8"
+psycopg2-binary = "^2.9.1"
+djangorestframework = "^3.12.4"
+djangorestframework-jwt = "^1.11.0"
+drf-yasg = "^1.20.0"
+dj-database-url = "^0.5.0"
+django-cors-headers = "^3.10.0"
+django-localflavor = "^3.1"
+django-extensions = "^3.0.9"
+django-filter = "^2.4.0"
+whitenoise = "^5.3.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.9.3"
+black = "^21.9b0"
+mypy = "^0.910"
+flake8 = "^4.0.1"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.6.1"
+pytest-django = "^4.4.0"
+pylint = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
