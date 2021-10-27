@@ -1,0 +1,12 @@
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: 
+    image: web
+    command:
+      - gunicorn --chdir reseller_cashback reseller_cashback.wsgi:application
+release:
+  image: web
+  command:
+    - ./deployment-tasks.sh
