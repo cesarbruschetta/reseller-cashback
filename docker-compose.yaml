@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  application:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./reseller_cashback:/app
+    env_file:
+      - .env
+      - .env.docker
+    depends_on:
+      - postgres
+
+  postgres:
+    environment:
+      - POSTGRES_DB=rc_db
+      - POSTGRES_PASSWORD=rc_password
+      - POSTGRES_USER=rc_user
+    image: postgres:12.6-alpine
+    ports:
+      - 5432:5432
+    restart: 'no'
+    volumes:
+      - /var/lib/postgresql

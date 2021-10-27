@@ -1,0 +1,21 @@
+[run]
+source =
+    reseller_cashback
+omit =
+    */.local/*
+    /usr/*
+    */test_*.py
+    *conftest.py
+    */.virtualenvs/*
+    *bin*
+    *migrations*
+    *apps.py
+    reseller_cashback/reseller_cashback/asgi.py
+    reseller_cashback/reseller_cashback/wsgi.py
+    reseller_cashback/reseller_cashback/settings/*.py
+    reseller_cashback/manage.py
+    reseller_cashback/__init__.py
+
+[report]
+show_missing = True
+skip_covered =  True
