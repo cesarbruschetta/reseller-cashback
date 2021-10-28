@@ -48,4 +48,4 @@ jobs:
           heroku container:login 
           heroku container:push -a reseller-cashback web 
           heroku container:release -a reseller-cashback web 
-        
+          heroku run -a reseller-cashback ./deployment-tasks.sh 
