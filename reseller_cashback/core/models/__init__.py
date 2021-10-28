@@ -1,4 +1,6 @@
-from .basemodel import BaseModelMixin
+from .basemodel import BaseModel
+from .reseller import ResellerModel
+from .sales_order import SalesOrderModel
 
 
-__all__ = ('BaseModelMixin',)
+__all__ = ('BaseModel', 'ResellerModel', 'SalesOrderModel')

@@ -5,7 +5,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class BaseModelMixin(models.Model):  # type: ignore
+class BaseModel(models.Model):  # type: ignore
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
@@ -24,6 +24,4 @@ class BaseModelMixin(models.Model):  # type: ignore
 
     def save(self, *args: Any, **kwargs: Any) -> None:
         self.updated_at = timezone.now()
-        if self.created_by_id is None:
-            self.created_by = self.updated_by
         super().save(*args, **kwargs)
