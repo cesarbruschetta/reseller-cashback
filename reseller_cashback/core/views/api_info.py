@@ -2,17 +2,17 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
-from .utils import get_domain
+from ..utils import get_domain
 
 
 api_info = openapi.Info(
-    title='CashBack Revendedor API',
+    title='CashBack Reseller API',
     default_version='v1',
     description='',
     contact=openapi.Contact(
         name='reselercashback.com',
         url='https://www.reselercashback.com/',
-        email='contato@reselercashback.com',
+        email='contact@reselercashback.com',
     ),
     license=openapi.License(
         name='MIT License',

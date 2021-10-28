@@ -143,6 +143,9 @@ SITE_ID = 1
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
 LOGIN_REDIRECT_URL = '/'
 
+# Users app
+AUTH_USER_MODEL = 'core.ResellerModel'
+
 # DRF
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
@@ -190,7 +193,6 @@ SWAGGER_SETTINGS = {
     },
     'REFETCH_SCHEMA_WITH_AUTH': True,
     'REFETCH_SCHEMA_ON_LOGOUT': True,
-    'DOC_EXPANSION': 'none',
     'DEFAULT_INFO': 'core.views.api_info',
 }
 

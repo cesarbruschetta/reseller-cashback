@@ -13,7 +13,13 @@ from django.views.generic.base import RedirectView
 
 
 urlpatterns_api_v1 = [
-    path('auth/', include(('auth.urls', 'auth'), namespace='auth_jwt')),
+    path(
+        'auth/', include(('authentication.urls', 'auth'), namespace='auth_jwt')
+    ),
+    path(
+        'core/',
+        include(('core.urls', 'core'), namespace='core'),
+    ),
 ]
 
 urlpatterns_swagger = [
