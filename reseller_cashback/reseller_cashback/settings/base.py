@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_filters',
     'core.apps.CoreConfig',
+    'authentication.apps.AuthConfig',
 ]
 
 MIDDLEWARE = [
@@ -166,7 +167,7 @@ REFRESH_EXPIRATION = os.getenv('REFRESH_EXPIRATION', 1 * DAY)
 
 JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'auth.payload.jwt_response_payload_handler',
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'authentication.payload.jwt_response_payload_handler',
     'JWT_EXPIRATION_DELTA': timedelta(seconds=int(JWT_EXPIRATION)),
     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(seconds=int(REFRESH_EXPIRATION)),
 }
