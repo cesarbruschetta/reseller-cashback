@@ -5,8 +5,8 @@ from django.db import models
 from localflavor.br.models import BRCPFField
 
 
-class SalesOrderModel(BaseModel):
-    class Meta(BaseModel.Meta):
+class SalesOrderModel(BaseModel):  # type: ignore
+    class Meta(BaseModel.Meta):  # type: ignore
         verbose_name = 'Sales Order'
         verbose_name_plural = 'Sales Orders'
         ordering = [

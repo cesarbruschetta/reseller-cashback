@@ -6,7 +6,7 @@ from rest_framework import serializers
 from ..models import SalesOrderModel
 
 
-class SalesOrderSerializer(BaseSerializer):
+class SalesOrderSerializer(BaseSerializer):  # type: ignore
     date = serializers.SerializerMethodField()
     cashback = serializers.SerializerMethodField()
 
