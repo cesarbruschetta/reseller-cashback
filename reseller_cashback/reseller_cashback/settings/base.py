@@ -227,3 +227,8 @@ LOGGING = {
         }
     },
 }
+
+CASHBACK_API_TARGET = (
+    'https://mdaqk8ek5j.execute-api.us-east-1.amazonaws.com/v1/cashback'
+)
+CASHBACK_API_TOKEN = os.getenv('CASHBACK_API_TOKEN')
