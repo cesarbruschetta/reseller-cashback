@@ -33,11 +33,12 @@ class SalesOrderModel(BaseModel):  # type: ignore
     )
 
     def get_cashback(self) -> Any:
-        if 0.0 < self.value <= 1000.0:
-            return self.value * 0.10
-        elif 1000.0 < self.value <= 1500.0:
-            return self.value * 0.15
-        elif self.value > 1500.0:
-            return self.value * 0.20
+        value = float(self.value)
+        if 0.0 < value <= 1000.0:
+            return value * 0.10
+        elif 1000.0 < value <= 1500.0:
+            return value * 0.15
+        elif value > 1500.0:
+            return value * 0.20
         else:
             return 0.0
